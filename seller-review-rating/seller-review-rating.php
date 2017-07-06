@@ -376,7 +376,9 @@ class EP_Plugin {
 			'seller_review_page',
 			[ $this, 'plugin_settings_page' ]
 		);
-
+		
+		add_submenu_page( 'seller_review_page', 'Review Status', 'Review Status', 'manage_options', 'review_status', 'review_status' );
+		
 		add_action( "load-$hook", [ $this, 'screen_option' ] );
 
 	}
